@@ -1,0 +1,18 @@
+# Entornos virtuales
+backend/venv/
+backend/.venv/
+__pycache__/
+*.pyc
+
+# Variables de entorno (contienen contraseñas y claves)
+backend/.env
+
+# Archivos subidos por usuarios (fotos)
+backend/static/uploads/*
+!backend/static/uploads/.gitkeep
+
+# Archivos de editor / sistema
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

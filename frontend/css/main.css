@@ -1,0 +1,33 @@
+/* Estilos generales del sitio. Se irán ampliando fase a fase. */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  background-color: #f7f7f5;
+  color: #1a1a1a;
+}
+
+.placeholder {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px;
+}
+
+.placeholder h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.nota {
+  margin-top: 24px;
+  color: #666;
+  max-width: 320px;
+}
