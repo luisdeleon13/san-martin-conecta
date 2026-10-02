@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Solicitar transporte | San Martín Conecta</title>
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="../css/rides.css" />
+</head>
+<body>
+  <main class="ride-page">
+    <h1>🚗 Solicitar transporte</h1>
+    <p class="subtitulo">Viaje privado bajo solicitud — no es transporte público.</p>
+
+    <form id="ride-form">
+      <label>Nombre
+        <input type="text" name="nombre" required minlength="2" />
+      </label>
+
+      <label>Teléfono
+        <input type="tel" name="telefono" required minlength="8" placeholder="Ej. 55512345" />
+      </label>
+
+      <label>Punto de recogida
+        <input type="text" name="origen" required placeholder="Ej. El Zapote" />
+      </label>
+
+      <label>Destino
+        <input type="text" name="destino" required placeholder="Ej. San Martín" />
+      </label>
+
+      <label>Número de pasajeros
+        <input type="number" name="pasajeros" required min="1" max="8" value="1" />
+      </label>
+
+      <label>Fecha
+        <input type="date" name="fecha" required />
+      </label>
+
+      <label>Hora
+        <input type="time" name="hora" required />
+      </label>
+
+      <label>Observaciones (opcional)
+        <textarea name="observaciones" maxlength="300"></textarea>
+      </label>
+
+      <button type="submit">Solicitar cotización</button>
+    </form>
+
+    <div id="resultado" class="resultado oculto">
+      <h2>Solicitud registrada</h2>
+      <p>Tarifa estimada: <strong id="tarifa"></strong></p>
+      <a id="whatsapp-btn" class="btn-whatsapp" target="_blank" rel="noopener">
+        Solicitar por WhatsApp
+      </a>
+    </div>
+
+    <p id="error" class="error oculto"></p>
+  </main>
+
+  <script src="../js/rides.js"></script>
+</body>
+</html>

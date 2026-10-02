@@ -1,8 +1,8 @@
-
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.core.config import settings
+from app.routers import rides
 
 app = FastAPI(
     title=settings.PLATFORM_NAME,
@@ -18,6 +18,8 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+app.include_router(rides.router)
+
 
 @app.get("/")
 def read_root():
@@ -31,5 +33,4 @@ def read_root():
 
 @app.get("/health")
 def health_check():
-    """Endpoint de salud, útil para verificar despliegues más adelante."""
     return {"status": "ok"}
